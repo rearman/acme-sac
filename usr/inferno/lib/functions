@@ -13,7 +13,3 @@ fn awk {
 fn git {
 	os -T git $*
 }
-
-fn date {
-	os date $*
-}

@@ -4,11 +4,11 @@
 
 #Datestrings
 #today
-(date -I)
+(os date -I)
 #moment
-(date +%T)
+(os date +%T)
 #dow
-(date +%a)
+(os date +%a)
 
 # ROAM/LOGSEQ	
 Daily-capture	Daily-Today	Todo	Alltodos

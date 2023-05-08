@@ -6,9 +6,10 @@ This repository is a copy of the Acme-Sac code from [[https://code.google.com/ar
 ** [[usr/inferno/lib/plumbing][/usr/inferno/lib/plumbing]]
 Some additions for my specific use-cases, added filetypes mostly, also added some extra characters to the regexps for folders.
 ** [[usr/inferno/lib/functions][/usr/inferno/lib/functions]]
-Moved the prompt function to [[usr/inferno/lib/profile]], added git function to call os with the undocumented =-T= option (better path parsing), made =date= a call to =os date=, since the inferno =date= is nigh useless for scripts.  
+Moved the prompt function to [[usr/inferno/lib/profile]], added git function to call os with the undocumented =-T= option (better path parsing).  
 ** [[dis/hp][/dis/hp:18]]
 Added =s|␣| |g;= to be able to send files to windows with a space in the filename.
 ** [[lib/sh/profile][/lib/sh/profile:15]]
 Changed drive letters to match my setup.
-
+** [[usr/inferno/dis][/usr/inferno/dis]]
+Some shell scripts in here that work together with org-style links and tags to re-create somewhat of a roam/logseq environment.  Find more about the format [[https://github.com/rearman/note-format][here]].  In short, things in double-brackets go through =tr= to create nice filenames and get a =.note= extension.
