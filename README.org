@@ -1,0 +1,14 @@
+* Acme-Sac
+
+This repository is a copy of the Acme-Sac code from [[https://code.google.com/archive/p/acme-sac/][google code]], with my changes to make it livable in Windows 10.
+
+* Notable changes: 
+** [[usr/inferno/lib/plumbing][/usr/inferno/lib/plumbing]]
+Some additions for my specific use-cases, added filetypes mostly, also added some extra characters to the regexps for folders.
+** [[usr/inferno/lib/functions][/usr/inferno/lib/functions]]
+Moved the prompt function to [[usr/inferno/lib/profile]], added git function to call os with the undocumented =-T= option (better path parsing), made =date= a call to =os date=, since the inferno =date= is nigh useless for scripts.  
+** [[dis/hp][/dis/hp:18]]
+Added =s|␣| |g;= to be able to send files to windows with a space in the filename.
+** [[lib/sh/profile][/lib/sh/profile:15]]
+Changed drive letters to match my setup.
+

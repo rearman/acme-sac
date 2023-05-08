@@ -1,0 +1,12 @@
+#!/dis/sh.dis
+
+today=`{os date -I}
+moment=`{os date +%T}
+
+if {! ftest -f $todofile}{
+	echo '#+title: Todo'$nl$nl >>$todofile
+}
+
+for i in $* {
+	echo 'TODO '$i$nl'['$today $moment']'$nl >>$todofile
+}

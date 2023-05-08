@@ -1,0 +1,13 @@
+#!/dis/sh.dis
+
+today=`{os date -I}
+moment=`{os date +%T}
+dailyfile=$notedir/$today.note
+
+if {! ftest -f $dailyfile}{
+	echo '#+title: '$today$nl$nl >>$dailyfile
+}
+
+for i in $* {
+	echo '* ['$moment'] '$i$nl >>$dailyfile
+}

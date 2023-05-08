@@ -1,0 +1,6 @@
+#!/dis/sh.dis
+
+for i in $* {
+	new =`{echo $i |sed 's/[_, ␣]/-/g; s/--*/-/g'}
+	mv $i $new
+}

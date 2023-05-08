@@ -1,0 +1,13 @@
+#!/dis/sh.dis
+
+for i in $* {
+	fname =`{echo $i |tr 'A-Z ' a-z-}
+}
+
+target=$notedir/$fname.note
+
+if {! ftest -f $target}{
+	echo '#+title: '$1$nl$nl >>$target
+}
+
+plumb $target

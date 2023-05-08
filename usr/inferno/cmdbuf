@@ -1,0 +1,31 @@
+(Edit ,x,,d)	(Edit x,^,i,# )	(Edit x,^# ,d)	(Edit |tr a-z A-Z)	(Edit |tr A-Z a-z)
+(Edit ,x,[	 ]+$,d)
+(Tab 8)	(chmod +x *) 
+
+#Datestrings
+#today
+(date -I)
+#moment
+(date +%T)
+#dow
+(date +%a)
+
+# ROAM/LOGSEQ	
+Daily-capture	Daily-Today	Todo	Alltodos
+Backlinks		Find-or-Create	Tagsearch	
+
+# Org modifiers
+# ++ == [[]] ** ^^^^ //
+
+(Edit {
+	i,MOD,
+	a,MOD,
+	})
+
+# C block comment	
+(Edit {
+	i,/* ,
+	a, */,
+	})
+
+/usr/rearman/bookmarks
