@@ -24,11 +24,7 @@ data matches '([a-zA-Z0-9␣_\-./,;:\$\ ]+)\.(jpg|jpeg|gif|bit|png|pdf|dvi|ps|do
 data isfile $0
 plumb alwaysstart winstart
 plumb start /dis/sh.dis -c 'dos $0'
-#plumb start /dis/sh.dis -c 'dos `{echo $0 | tr ''␣'' '' ''}'
-#plumb start /dis/sh.dis -c 'dos '`{echo $0 | sed ''s/␣/ /g; s/\/n\/(.)/\1:/''}
-#Gets rid of the ␣ when sending to windows
-#The quotes in the sed expression are two single quotes, not double quotes
-#But before the { is one double-quote
+#This works because of a change at /dis/hp:18
 
 # Simple URLs ending in .acme to go acme
 kind is text
