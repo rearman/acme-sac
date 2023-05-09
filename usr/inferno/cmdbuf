@@ -1,5 +1,7 @@
-(Edit ,x,,d)	(Edit x,^,i,# )	(Edit x,^# ,d)	(Edit |tr a-z A-Z)	(Edit |tr A-Z a-z)
-(Edit ,x,[	 ]+$,d)
+# Edit Commands
+(x,^,i,# )	(x,^# ,d)	(x,^,i,	)	(x,^	,d)	(|tr a-z A-Z)	(|tr A-Z a-z)
+(,x,[	 ]+$,d)	(,x,,d)
+
 (Tab 8)	(chmod +x *) 
 
 #Datestrings
@@ -11,8 +13,8 @@
 (os date +%a)
 
 # ROAM/LOGSEQ	
-Daily-capture	Daily-Today	Todo	Alltodos
-Backlinks		Find-or-Create	Tagsearch	
+Daily-capture	Daily-Today	Todo	Alltodos	Scheduled
+Backlinks		Find-or-Create	Tagsearch
 
 # Org modifiers
 # ++ == [[]] ** ^^^^ //
