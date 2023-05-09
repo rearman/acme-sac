@@ -9,5 +9,5 @@ if {! ftest -f $dailyfile}{
 }
 
 for i in $* {
-	echo '* ['$moment'] '$i$nl >>$dailyfile
+	echo '['$moment'] '$i$nl >>$dailyfile
 }
