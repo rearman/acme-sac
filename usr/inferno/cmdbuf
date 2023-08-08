@@ -1,8 +1,16 @@
 # Edit Commands
-(x,^,i,# )	(x,^# ,d)	(x,^,i,	)	(x,^	,d)	(|tr a-z A-Z)	(|tr A-Z a-z)
-(,x,[	 ]+$,d)	(,x,,d)
+(x,^,i,# )	(x,^# ,d)
+(x,^,i,	)	(x,^	,d)
+(|tr a-z A-Z)	(|tr A-Z a-z)
+(,x,,d)
 
-(Tab 8)	(chmod +x *) 
+# Join lines
+(s,\n[ 	]+, ,g)
+
+# Trailing whitespace and ensure newline
+(,x,[	 ]+$,d)	($y,\n,c,\n)
+
+(Tab 8)	(chmod +x *)
 
 #Datestrings
 #today
@@ -12,19 +20,21 @@
 #dow
 (os date +%a)
 
-# ROAM/LOGSEQ	
-Daily-capture	Daily-Today	Todo	Alltodos	Scheduled
-Backlinks		Find-or-Create	Tagsearch
+# NOTES
+/usr/rearman/note	/usr/rearman/scratch
+Capture	Today	Find_or_Create
+Todo	Alltodos	Scheduled
+Backlinks	Tags
 
 # Org modifiers
-# ++ == [[]] ** ^^^^ //
+++ == [[]] ** ^^^^ //
 
 (Edit {
 	i,MOD,
 	a,MOD,
 	})
 
-# C block comment	
+# C block comment
 (Edit {
 	i,/* ,
 	a, */,

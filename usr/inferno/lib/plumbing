@@ -20,7 +20,7 @@ plumb start /dis/sh.dis -c 'plumb -d edit /n/^`{echo $1 | tr A-Z a-z}^`{echo $2 
 # files to send to host (windows)
 kind is text
 data matches '[a-zA-Z0-9␣_\-./,;:\$\ ]+'
-data matches '([a-zA-Z0-9␣_\-./,;:\$\ ]+)\.(jpg|jpeg|gif|bit|png|pdf|dvi|ps|doc|docx|xls|xlsx|cgm|zip|ppt|pptx|exe|wav|bmp|adpro)'
+data matches '([a-zA-Z0-9␣_\-./,;:\$\ ]+)\.(jpg|jpeg|gif|bit|png|pdf|dvi|ps|doc|docx|xls|xlsx|cgm|zip|ppt|pptx|exe|wav|bmp|adpro|dwg)'
 data isfile $0
 plumb alwaysstart winstart
 plumb start /dis/sh.dis -c 'dos $0'

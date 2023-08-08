@@ -1,3 +1,0 @@
-#!/dis/sh.dis
-
-grep -n ':'$1':' $notedir/*
