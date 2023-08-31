@@ -21,11 +21,9 @@
 (os date +%a)
 
 # NOTES
-/usr/rearman/note	/usr/rearman/scratch
-/usr/rearman/note/daily.note
-Capture	Today	Find_or_Create
-Todo	Alltodos	Scheduled
-Backlinks	Tags		Datestamp
+/usr/rearman/scratch
+/usr/rearman/note
+/usr/rearman/note/daily/
 
 # Mark as done
 (Edit {

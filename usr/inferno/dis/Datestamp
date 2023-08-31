@@ -3,4 +3,4 @@
 today=`{os date -I}
 moment=`{os date +%T}
 
-echo [$today $moment]
+echo [[$today] $moment]

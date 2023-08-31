@@ -1,7 +1,7 @@
 #!/dis/sh.dis
 
 today=`{os date -I}
-dailyfile=$notedir/$today.note
+dailyfile=$notedir/daily/$today.note
 
 if {! ftest -f $dailyfile}{
 	echo '#+title: '$today$nl$nl >>$dailyfile

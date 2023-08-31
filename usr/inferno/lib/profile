@@ -38,6 +38,7 @@ winhome=/n/c/Users/$user
 # For Logseq copy
 notedir=$home/note
 todofile=$notedir/todo.note
+donefile=$notedir/done.note
 
 acme -al $home/lib/default.dump
 sleep 1

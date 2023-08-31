@@ -8,5 +8,5 @@ if {! ftest -f $todofile}{
 }
 
 for i in $* {
-	echo 'TODO '$i'	['$today $moment'] [finishdate]'$nl >>$todofile
+	echo 'TODO '$i'	[['$today']' $moment'] [finishdate]'$nl >>$todofile
 }
