@@ -22,9 +22,16 @@
 
 # NOTES
 /usr/rearman/note	/usr/rearman/scratch
+/usr/rearman/note/daily.note
 Capture	Today	Find_or_Create
 Todo	Alltodos	Scheduled
-Backlinks	Tags
+Backlinks	Tags		Datestamp
+
+# Mark as done
+(Edit {
+	x,TODO,c,DONE,
+	x,\[finishdate\],<Datestamp
+	})
 
 # Org modifiers
 ++ == [[]] ** ^^^^ //

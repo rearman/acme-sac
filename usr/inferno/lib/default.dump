@@ -1,10 +1,14 @@
 /usr/rearman
 /fonts/vera/Vera/unicode.14.font
 /fonts/vera/VeraMono/VeraMono.14.font
-          0          27          80
-f          0          11           0           0           1 
-         11          40         317           1           0 /usr/rearman/note/ Del Snarf Get | Look 
-f          1          20           0           0           1 
-         20          62           0           0           0 /usr/rearman/scratch Del Snarf Undo | Look 	Capture	Todo	Today
-f          2           1         311         311           1 
-          1          41         588           0           0 /usr/rearman/cmdbuf Del Snarf Undo | Edit
+          0          26          78
+f          0           1         259         259           1 
+          1          40         259           1           0 /usr/rearman/note/ Del Snarf Get | Look 
+f          0           2         600         600          20 
+          2          49         600           0           0 /usr/rearman/note/todo.note Del Snarf | Look Get 
+f          1           4           0           0           1 
+          4          82           0           0           0 /usr/rearman/scratch Del Snarf Undo | Look 	Todo	Alltodos	Datestamp	Find_or_Create
+f          1           5        1786        1786          20 
+          5         106        2599           0           0 /usr/rearman/note/daily.note Del Snarf Undo | Look 
+f          2           6         556         556           1 
+          6          41         657           0           0 /usr/rearman/cmdbuf Del Snarf Redo | Edit

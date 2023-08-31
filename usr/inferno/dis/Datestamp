@@ -1,0 +1,6 @@
+#!/dis/sh.dis
+
+today=`{os date -I}
+moment=`{os date +%T}
+
+echo [$today $moment]
