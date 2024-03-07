@@ -1,48 +1,37 @@
 # Edit Commands
-(x,^,i,# )	(x,^# ,d)
-(x,^,i,	)	(x,^	,d)
-(|tr a-z A-Z)	(|tr A-Z a-z)
-(,x,,d)
-
-# Join lines
-(s,\n[ 	]+, ,g)
-
-# Trailing whitespace and ensure newline
-(,x,[	 ]+$,d)	($y,\n,c,\n)
-
-(Tab 8)	(chmod +x *)
+(x,^,i,# ) (x,^# ,d)		-- C Comment
+(x,^,i,\\" ) (x,^\\" ,d)		-- Troff Comment
+(x,^,i,	) (x,^	,d)	-- Indentation
+(|tr a-z A-Z) (|tr A-Z a-z)	-- Change Case
+(s,\n[ 	]+, ,g)		-- Join lines
+(x,\n,a,\n)				-- Add lines
+(,x,[	 ]+$,d)			-- Trailing whitespace
+(,x,,d)				-- Remove 
 
 #Datestrings
-#today
-(os date -I)
-#moment
-(os date +%T)
-#dow
-(os date +%a)
+(os date -I)	-- today
+(os date +%T)	-- moment
+(os date +%a)	-- dow
 
-# NOTES
-/usr/rearman/scratch
-/usr/rearman/note
-/usr/rearman/note/daily/
+# Mark as done (chord with Edit)
+'{
+x,TODO,c,DONE,
+x,\[finishdate\],<datestamp
+}'
 
-# Mark as done
-(Edit {
-	x,TODO,c,DONE,
-	x,\[finishdate\],<Datestamp
-	})
-
-# Org modifiers
-++ == [[]] ** ^^^^ //
-
-(Edit {
-	i,MOD,
-	a,MOD,
-	})
+# Org modifiers (chord with Edit)
+# ++ == [[]] ** ^^^^ //
+'{
+i,MOD,
+a,MOD,
+}'
 
 # C block comment
-(Edit {
-	i,/* ,
-	a, */,
-	})
+'{
+i,/* ,
+x,\n.,x,\n,a, * ,
+a, */,
+}'
 
-/usr/rearman/bookmarks
+# Compiling LaTeX
+(os -T pdflatex FILENAME.tex)

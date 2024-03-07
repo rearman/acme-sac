@@ -4,12 +4,11 @@
 # to read: cat /chan/plumb.rules
 # cat /chan/plumb.rules | awk '/^$/ {print "\n# rule " i++} ! /^$/ {print}
 
-# logseq/roam-like links go to $home/dis/Find-or-Create
+# logseq/roam-like links
 kind is text
-data matches '\[+(.+)\]+'
-data set $1
+data matches '\[+([^\[\]]+)\]+'
 plumb alwaysstart winstart
-plumb start /dis/sh.dis -c 'Find-or-Create `{echo $1 | tr ''A-Z '' ''a-z\-''}'
+plumb start /dis/sh.dis -c 'findnote `{echo $1 | tr '' '' ''_''}'
 
 # Microsoft Windows file names
 kind is text
@@ -48,7 +47,7 @@ plumb start /dis/sh.dis -c 'winstart $0'
 
 # existing files, possibly tagged by line number, go to acme
 kind is text
-data matches '([.a-zA-Z0-9_/\-,;:\$\ ␣]+[a-zA-Z0-9_/\-,;:\$\ ␣])(:(((#?[0-9]+)|(/[A-Za-z0-9_\^,;:\$\ ␣]+/?)|[.$])([,;+\-]((#?[0-9]+)|(/[A-Za-z0-9_\^,;:\$\ ␣]+/?)|[.$]))*))?'
+data matches '([.a-zA-Z0-9_/\-,;:\$\ ␣@]+[a-zA-Z0-9_/\-,;:\$\ ␣@])(:(((#?[0-9]+)|(/[A-Za-z0-9_\^,;:\$\ ␣@]+/?)|[.$])([,;+\-]((#?[0-9]+)|(/[A-Za-z0-9_\^,;:\$\ ␣@]+/?)|[.$]))*))?'
 data isfile	$1
 data set	$file
 attr set	'action=showfile	addr=$3'

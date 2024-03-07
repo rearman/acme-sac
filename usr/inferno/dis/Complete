@@ -1,4 +1,4 @@
 #!/dis/sh.dis
 
-grep DONE $todofile >>$donefile
-sed '/DONE/d' $todofile >>$home/tmp/todo.tmp && mv $home/tmp/todo.tmp $todofile
+grep '^DONE' $todofile >>$donefile
+sed '/^DONE/d' $todofile >>$home/tmp/todo.tmp && mv $home/tmp/todo.tmp $todofile

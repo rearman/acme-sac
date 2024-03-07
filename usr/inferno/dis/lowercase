@@ -1,0 +1,6 @@
+#!/dis/sh.dis
+
+for i in $* {
+	new =`{echo $i |tr 'A-Z' 'a-z'}
+	mv $i $new
+}

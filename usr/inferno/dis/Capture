@@ -1,10 +1,11 @@
 #!/dis/sh.dis
 
-today=`{os date -I}
+thedate=`{os date -I}
+today=`{echo $thedate |tr - _}
 dailyfile=$notedir/daily/$today.note
 
 if {! ftest -f $dailyfile}{
-	echo '#+title: '$today$nl$nl >>$dailyfile
+	echo '#+title: '$thedate$nl$nl >>$dailyfile
 }
 
 for i in $* {

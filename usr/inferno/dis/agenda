@@ -1,0 +1,10 @@
+#!/dis/sh.dis
+
+echo 'NEEDED ITEMS'$nl
+grep -n ':need:' $notedir/*
+echo $nl'TASKS TO REFILE'$nl
+grep -n 'TODO' $notedir/todo.note
+echo $nl'IN PROGRESS'$nl
+grep -n 'IN[-_ ]PROGRESS' $notedir/*
+echo $nl'FILED TASKS'$nl
+grep -n 'TODO' $notedir/* |sed '/todo\.note/d'

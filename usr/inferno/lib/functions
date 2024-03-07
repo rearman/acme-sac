@@ -13,3 +13,7 @@ fn awk {
 fn git {
 	os -T git $*
 }
+
+fn powershell {
+	os -T powershell $*
+}
